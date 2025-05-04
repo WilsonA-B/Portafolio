@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio - Wilson Vega</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Ey! Hola, </h1>
+    <h2>Bienvenido a mi portafolio</h2>
+    <p class="frase">"Construyendo mi camino hacia ser un gran programador. :D"</p>
+    <div class="botones">
+        <a href="#proyectos" class="boton">Ver proyectos</a>
+        <a href="#sobre-mi" class="boton secundario">Sobre mí</a>
+    </div>
+  </header>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <div class="contenido-sobre-mi">
+        <div class="imagen">
+            <img src="src/Imagen1.png" alt="Imagen1" />
+        </div>
+        <div class="texto">
+            <p>
+              Soy Wilson Andres Vega Higuera, un chico de 19 años apasionado por la programación. Me encanta pasarme horas escribiendo código, aprendiendo nuevas tecnologías y superando desafíos. 
+              Actualmente soy Técnico en Operaciones de Software y Redes de Cómputo, con el sueño de convertirme en un gran programador profesional.
+            </p>
+            <p>Algunos lenguajes y tecnologías que manejo son:</p>
+            <ul>
+              <li>C#</li>
+              <li>C++</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>SQL</li>
+              <li>Java (mi favorito)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Botón de volver arriba -->
+  <a href="#" class="btn-volver-arriba" id="btnVolverArriba">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  
+  <script>
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        btnVolverArriba.classList.add('visible');
+    } else {
+        btnVolverArriba.classList.remove('visible');
+    }
+});
+</script>
+
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="proyectos-contenedor">
+      <div class="proyecto">
+        <h3>Mini Tienda en Java con SQL</h3>
+        <p>Este proyecto consiste en una mini tienda programada en Java utilizando NetBeans, donde se conectó una base de datos SQL a través de XAMPP. El sistema permite realizar operaciones básicas como agregar, eliminar y modificar productos en una base de datos local.</p>
+        <a href="#" target="_blank" class="boton-proyecto">Ver Proyecto</a>
+      </div>
+      <!-- Agrega más proyectos aquí -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contenido">
+        <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+        
+        <!-- Redes sociales -->
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/aliasmichi" class="icono" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i> <!-- Ícono de Instagram -->
+            </a>
+            <a href="https://github.com/WilsonA-B" class="icono" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i> <!-- Ícono de GitHub -->
+            </a>
+            <a href="https://discord.com/users/621166467634954241" class="icono" target="_blank" title="Discord">
+                <i class="fab fa-discord"></i> <!-- Ícono de Discord -->
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

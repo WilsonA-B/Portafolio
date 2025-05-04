@@ -1,0 +1,266 @@
+/* Reset general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+/* Ajustamos el header */
+header {
+    height: 100vh; /* ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.frase {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-style: italic;
+    max-width: 600px;
+}
+
+/* Botón volver arriba */
+.btn-volver-arriba {
+    position: fixed;
+    bottom: 30px;  /* Distancia desde el borde inferior de la ventana */
+    right: 30px;   /* Distancia desde el borde derecho de la ventana */
+    width: 50px;   /* Tamaño del botón */
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    font-size: 28px; /* Ícono más grande */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    margin-bottom: 20px; /* Evitar que se pegue a otras secciones */
+}
+
+/* Cuando el botón se muestra */
+.btn-volver-arriba.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Estilo general para ambos botones */
+.boton {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent; /* Añadimos un borde transparente para el botón secundario */
+}
+
+/* Hover para el botón */
+.boton:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Botón secundario */
+.boton.secundario {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+/* Hover para el botón secundario */
+.boton.secundario:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Ajustes para ambos botones */
+.botones {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+/* Sección Sobre mí */
+#sobre-mi {
+    background-color: #ffffff;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 20px; /* Separación entre las secciones */
+}
+
+#sobre-mi h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para la imagen y el texto */
+.contenido-sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se acomoden bien */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para la imagen en la sección Sobre mí */
+#sobre-mi img {
+    width: 300px; /* Establece el ancho de la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-right: 20px; /* Añade un margen a la derecha de la imagen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para la imagen dentro de cualquier contenedor con la clase .imagen */
+.imagen img {
+    max-width: 100%; /* Hace que la imagen se ajuste al tamaño máximo disponible */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 300px; /* Ajuste el tamaño según lo que necesites */
+}
+
+
+/* Texto */
+.texto {
+    max-width: 600px;
+    text-align: justify; /* Justificamos el texto */
+}
+
+/* Estilo de la lista */
+.texto ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.texto ul li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    position: relative;
+    padding-left: 25px; /* Espacio para la estrella */
+}
+
+.texto ul li::before {
+    content: '\2605'; /* Símbolo de estrella */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: #FFD700; /* Color dorado para la estrella */
+}
+
+/* Sección Proyectos */
+#proyectos {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 20px; /* Separación entre las secciones */
+}
+
+#proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.proyectos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Proyectos */
+.proyecto {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 280px; /* Ajustamos un poco el tamaño */
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: translateY(-10px);
+}
+
+.proyecto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.boton-proyecto {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.boton-proyecto:hover {
+    background-color: #555;
+}
+
+/* Estilos para el Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.redes-sociales {
+    margin-top: 10px;
+}
+
+.redes-sociales .icono {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.redes-sociales .icono:hover {
+    color: #74ebd5; /* Puedes cambiar el color cuando el mouse pase por encima */
+}
+
