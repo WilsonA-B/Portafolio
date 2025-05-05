@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Bookman Old Style', sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 /* Sección de Inicio / Presentación */
@@ -16,6 +16,7 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
     padding: 20px;
+    margin-bottom: 20px; /* Separación entre las secciones */
 }
 
 .contenido-inicio h1 {
@@ -117,7 +118,7 @@ body {
     right: 30px;   /* Distancia desde el borde derecho de la ventana */
     width: 50px;   /* Tamaño del botón */
     height: 50px;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     font-size: 28px; /* Ícono más grande */
     border-radius: 50%;
@@ -133,6 +134,11 @@ body {
     margin-bottom: 20px; /* Evitar que se pegue a otras secciones */
 }
 
+.btn-volver-arriba:hover {
+    transform: scale(1.1);
+    background-color: #222;
+}
+
 /* Cuando el botón se muestra */
 .btn-volver-arriba.visible {
     opacity: 1;
@@ -140,22 +146,24 @@ body {
 }
 
 
-/* Estilo general para ambos botones */
+/* Estilo general para botones */
 .boton {
     display: inline-block;
     padding: 12px 30px;
     background-color: #ffffff;
-    color: #333;
+    color: #667eea;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-    border: 2px solid transparent; /* Añadimos un borde transparente para el botón secundario */
+    transition: color 0.3s, background-color 0.3s;
+    border: 2px solid transparent; /* Añadimos un borde transparente para el botón secundario */ 
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover para el botón */
 .boton:hover {
     background-color: #f1f1f1;
+    transform: scale(1.05);
     color: #333;
 }
 
@@ -172,7 +180,7 @@ body {
     color: #ffffff;
 }
 
-/* Ajustes para ambos botones */
+/* Ajustes para botones */
 .botones {
     margin-top: 30px;
     display: flex;
@@ -183,11 +191,17 @@ body {
 
 /* Sección Sobre mí */
 #sobre-mi {
+    margin-top: 40px;
+    margin-bottom: 40px; /* Separación entre las secciones */
     background-color: #ffffff;
     color: #333;
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
-    margin-bottom: 20px; /* Separación entre las secciones */
+    max-width: 1150px;
+    margin: 20px auto 40px auto;    
+    border-radius: 75px; /* Bordes redondeados */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombreado */
+    scroll-margin-top: 30px;
 }
 
 #sobre-mi h2 {
@@ -203,7 +217,7 @@ body {
     gap: 30px;
     flex-wrap: wrap; /* Para que en pantallas pequeñas se acomoden bien */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 /* Estilo para la imagen en la sección Sobre mí */
@@ -223,7 +237,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     width: 300px; /* Ajuste el tamaño según lo que necesites */
 }
-
 
 /* Texto */
 .texto {
@@ -256,11 +269,12 @@ body {
 
 /* Sección Proyectos */
 #proyectos {
-    background-color: #f9f9f9;
-    color: #333;
+    /*background-color: #f9f9f9;*/
+    color: #000;
     padding: 60px 20px;
     text-align: center;
     margin-bottom: 20px; /* Separación entre las secciones */
+    scroll-margin-top: 5px;
 }
 
 #proyectos h2 {
@@ -324,9 +338,11 @@ body {
     border-radius: 30px;
     transition: background-color 0.3s;
     align-self: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .boton-proyecto:hover {
+    transform: scale(1.05); /* Hace que el botón se agrande un poco */
     background-color: #555;
 }
 
