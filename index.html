@@ -9,16 +9,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Ey! Hola, </h1>
-    <h2>Bienvenido a mi portafolio</h2>
-    <p class="frase">"Construyendo mi camino hacia ser un gran programador. :D"</p>
-    <div class="botones">
-        <a href="#proyectos" class="boton">Ver proyectos</a>
-        <a href="#sobre-mi" class="boton secundario">Sobre mí</a>
+  <header class="navbar">
+    <div class="logo">Wilson A. Vega H.</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#footer">Contacto</a>
+    </nav>
+    <div class="menu-icon" id="menuIcon">
+      <i class="fas fa-bars"></i>
     </div>
-  </header>
+  </header>  
 
+  <section id="inicio" class="seccion-inicio">
+    <div class="contenido-inicio">
+      <h1>¡Hola! Soy Wilson Vega</h1>
+      <p>Bienvenido a mi portafolio. Aquí podrás conocer un poco sobre mí y mis proyectos.</p>
+      <a href="#sobre-mi" class="boton">Ver más</a>
+    </div>
+  </section>
+  
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
     <div class="contenido-sobre-mi">
@@ -48,17 +59,6 @@
   <a href="#" class="btn-volver-arriba" id="btnVolverArriba">
     <i class="fas fa-chevron-up"></i>
   </a>
-  
-  <script>
-    window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        btnVolverArriba.classList.add('visible');
-    } else {
-        btnVolverArriba.classList.remove('visible');
-    }
-});
-</script>
-
 
   <section id="proyectos">
     <h2>Proyectos</h2>
@@ -73,7 +73,7 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer id="footer">
     <div class="footer-contenido">
         <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
         
@@ -90,6 +90,7 @@
             </a>
         </div>
     </div>
-</footer>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
